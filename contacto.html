@@ -1,0 +1,95 @@
+<!DOCTYPE >
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Ubicación | El Rincón del Costurero</title>
+    <link rel="icon" type="image/png" href="IMAGENES/ChatGPT Image 9 oct 2025, 19_52_59.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="IMAGENES/ChatGPT Image 9 oct 2025, 19_52_59.png" alt="Logo El Rincón del Costurero" class="logo-img">
+            <h1>El Rincón del Costurero</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="cursos.html"><i class="fas fa-book-open"></i> Cursos</a></li>
+                <li><a href="contacto.html" class="active"><i class="fas fa-map-marker-alt"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="formulario-contacto">
+            <h2>Envíanos tu Consulta</h2>
+            <p>Rellena el formulario y te responderemos a la mayor brevedad posible.</p>
+            
+            <form action="/submit-form" method="POST"> 
+                
+                <fieldset>
+                    <legend>Tus Datos Personales</legend>
+                    
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu Mensaje</legend>
+                    
+                    <div>
+                        <label for="motivo">Motivo de la consulta:</label>
+                        <select id="motivo" name="motivo">
+                            <option value="curso">Consulta sobre un curso</option>
+                            <option value="inscripcion">Inscripción a un taller</option>
+                            <option value="otro">Otro motivo</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="button"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+
+            </form>
+        </section>
+
+        <section id="ubicacion">
+            <h2>Dónde Encontrarnos</h2>
+            
+            <address>
+                <i class="fas fa-location-arrow"></i> Calle Jaizkibel, 12, 28042 Madrid, España<br>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 El Rincón del Costurero.</p>
+        <address>
+            <i class="fas fa-envelope"></i> <a href="mailto:contacto@rincondelcosturero.com">info@rincondelcosturero.com</a> | 
+            <i class="fas fa-phone"></i> +34 900 11 22 33
+        </address>
+    </footer>
+
+</body>
+</html>

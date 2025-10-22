@@ -1,0 +1,211 @@
+/* style.css */
+/* PALETA DE COLORES: Brown (#795548) y Deep Orange (#FF6E40)*/
+
+/* 1. Configuración Base */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta de colores */
+    --color-primary: #795548;        /* Brown 500: Texto principal, bordes */
+    --color-primary-dark: #5D4037;   /* Brown 700: Fondos oscuros, footer */
+    --color-accent: #FF6E40;         /* Deep Orange A400: Botones, hover/focus */
+    --color-accent-dark: #FF3D00;    /* Deep Orange A700: Hover de botones */
+    --color-light: #efebe9;          /* Brown 50: Fondo claro */
+    
+    --padding-global: 16px;
+    --gap-minimo: 8px; 
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 16px; 
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    background-color: var(--color-light); /* Fondo claro de la paleta */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Arial', sans-serif;
+    color: var(--color-primary); /* Encabezados con el color principal (Brown 500) */
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. Estilos del Header y Navegación */
+
+header {
+    background: linear-gradient(to right, #ffffff, var(--color-light)); /* Degradado sutil */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-global);
+    border-bottom: 2px solid var(--color-primary); /* Borde con Brown 500 */
+}
+
+/* Estilo logo*/
+.logo-img {
+    height: auto;
+    width: 40px; /* Tamaño fijo, para que no sea enorme */
+    min-width: 32px; /* Aseguramos que se vea bien en móviles */
+    max-width: 60px; /* Evitamos que crezca demasiado en desktop */
+    margin: 0; /* Eliminar posibles márgenes por defecto */
+    display: block; /* Asegura que se alinee bien con el texto */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinea la imagen y el h1 verticalmente */
+    gap: var(--gap-minimo); 
+}
+
+.logo i {
+    font-size: 2.2em;
+    color: var(--color-accent); /* Icono con el color de acento (Deep Orange A400) */
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--padding-global);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-primary-dark); /* Texto de navegación oscuro (Brown 700) */
+    font-weight: bold;
+    padding: var(--gap-minimo);
+    display: block;
+    border-radius: 4px;
+    /* Elemento interactivo con transición */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Pseudo-clases: hover y focus */
+nav a:hover,
+nav a:focus {
+    background-color: var(--color-accent); /* Deep Orange A400 */
+    color: white; 
+    outline: none;
+}
+
+nav a.active {
+    color: var(--color-accent); /* Enlace activo con Deep Orange A400 */
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* 3. Estilos de Contenido General (Main y Sections) */
+
+main {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: var(--padding-global);
+}
+
+section {
+    padding: var(--padding-global) 0;
+    margin-bottom: calc(var(--padding-global) * 2);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#hero figure {
+    background-color: white;
+    padding: var(--gap-minimo);
+    border: 1px solid var(--color-light);
+}
+
+/* Estilos de las tarjetas de curso (cursos.html) */
+.curso {
+    border: 1px solid var(--color-light);
+    padding: var(--padding-global);
+    margin-bottom: var(--padding-global);
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Estilos de Componentes (Botones, Formularios) */
+
+/* Botones (Tamaño mínimo 48x48) */
+.button {
+    display: inline-block;
+    background-color: var(--color-accent); /* Deep Orange A400 */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    padding: 12px 24px; 
+    min-width: 48px; 
+    min-height: 48px; 
+    
+    /* Transición de animación */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--color-accent-dark); /* Deep Orange A700 */
+    transform: translateY(-2px);
+}
+
+/* Estilos del Formulario (contacto.html) */
+#formulario-contacto {
+    border: 1px solid var(--color-light);
+}
+
+legend {
+    font-weight: bold;
+    color: var(--color-primary); /* Brown 500 */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-accent); /* Deep Orange A400 al enfocar */
+    box-shadow: 0 0 5px rgba(255, 110, 64, 0.5);
+    outline: none;
+}
+
+/* 5. Estilos del Footer */
+footer {
+    background-color: var(--color-primary-dark); /* Fondo con Brown 700 */
+    color: white;
+    padding: var(--padding-global);
+    text-align: center;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--color-accent); /* Enlaces con Deep Orange A400 */
+    text-decoration: none;
+}
+
+/* 6. Media Queries (Diseño Responsive) */
+
+/* (Las media queries no cambian, mantienen la estructura responsive) */
