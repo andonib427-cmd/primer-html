@@ -206,6 +206,15 @@ footer a {
     text-decoration: none;
 }
 
-/* 6. Media Queries (Diseño Responsive) */
+/* 6. (Diseño Responsive) */
 
-/* (Las media queries no cambian, mantienen la estructura responsive) */
+/* Tablet y Escritorio (Mínimo 768px) */
+@media (min-width: 768px) {
+    header {
+        padding: calc(var(--padding-global) * 2);
+    }
+}
+
+/* Móvil (Máximo 600px) */
+@media (max-width: 600px) {
+}
