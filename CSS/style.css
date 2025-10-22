@@ -205,16 +205,3 @@ footer a {
     color: var(--color-accent); /* Enlaces con Deep Orange A400 */
     text-decoration: none;
 }
-
-/* 6. (Diseño Responsive) */
-
-/* Tablet y Escritorio (Mínimo 768px) */
-@media (min-width: 768px) {
-    header {
-        padding: calc(var(--padding-global) * 2);
-    }
-}
-
-/* Móvil (Máximo 600px) */
-@media (max-width: 600px) {
-}
