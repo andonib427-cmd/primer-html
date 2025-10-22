@@ -222,15 +222,15 @@ footer a {
     }
 
     /* AJUSTE PARA EL TÍTULO DEL LOGO */
-    /* Lo reducimos a 1.2empara asegurar que quepa mejor */
+    /* Lo reducimos a 1.2em para asegurar que quepa mejor */
     .logo h1 {
-        font-size: 1.2em; /* Reducido de 1.8em (desktop) a un tamaño más pequeño */
+        font-size: 1em; /* Reducido de 1.8em (desktop) a un tamaño más pequeño */
         margin: 0; /* Aseguramos que no haya márgenes que empujen */
     }
     
     /* El logo img también ligeramente mas pequeño*/
     .logo-img {
-        width: 35px; /* Reducción ligera para liberar espacio */
+        width: 30px; /* Reducción ligera para liberar espacio */
     }
     
     /* ... el resto de estilos de móvil ... */
