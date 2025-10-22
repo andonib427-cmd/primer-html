@@ -215,7 +215,7 @@ footer a {
 }
 
 /* Móvil (Máximo 600px) */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     /* ... otras reglas de móvil ... */
 
     /* AJUSTE PARA EL TÍTULO DEL LOGO */
