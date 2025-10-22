@@ -205,3 +205,26 @@ footer a {
     color: var(--color-accent); /* Enlaces con Deep Orange A400 */
     text-decoration: none;
 }
+/* 6. Media Queries (Diseño Responsive) */
+
+/* Tablet y Escritorio (Mínimo 768px) */
+@media (min-width: 768px) {
+    header {
+        padding: calc(var(--padding-global) * 2);
+    }
+}
+
+/* Móvil (Máximo 600px) */
+@media (max-width: 600px) {
+    /* ... otras reglas de móvil ... */
+
+    /* AJUSTE PARA EL TÍTULO DEL LOGO */
+    .logo h1 {
+        font-size: 1.5em; /* Reducir tamaño del texto */
+        line-height: 1.2; /* Ajustar la altura de línea para mejor legibilidad */
+    }
+    header {
+        /* ... */
+        gap: 10px; 
+    }
+}
